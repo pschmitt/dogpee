@@ -15,7 +15,7 @@ fi
 case "$1" in
     arm|armhf)
         BASE_IMAGE=resin/raspberry-pi-alpine
-        DOCKER_IMAGE=pschmitt/dogpee
+        DOCKER_IMAGE=pschmitt/dogpee-armhf
         case $(uname -m) in
             x86_64|i386)
                 echo "Setting up ARM compatibility"
@@ -25,7 +25,7 @@ case "$1" in
         ;;
     *)
         BASE_IMAGE=alpine
-        DOCKER_IMAGE=pschmitt/dogpee-armhf
+        DOCKER_IMAGE=pschmitt/dogpee
         ;;
 esac
 
