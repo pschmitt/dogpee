@@ -2,7 +2,7 @@
 
 # https://docs.resin.io/learn/develop/runtime/#rebooting-the-device
 
-_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket \
+DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket \
   dbus-send \
   --system \
   --print-reply \
