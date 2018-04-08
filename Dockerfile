@@ -12,6 +12,9 @@ ENV DEST_IP= \
     INITIAL_DELAY=30 \
     QUIET=true
 
-VOLUME ["/run/systemd"]
+VOLUME ["/host/run/systemd", "/host/run/dbus"]
+
 ADD dogpee.sh /dogpee.sh
+ADD resin-reboot.sh /sbin/resin-reboot
+
 CMD /dogpee.sh
