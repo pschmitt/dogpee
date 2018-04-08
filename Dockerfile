@@ -13,5 +13,5 @@ ENV DEST_IP= \
     QUIET=true
 
 VOLUME ["/run/systemd"]
-ADD peedog.sh /peedog.sh
-CMD /peedog.sh
+ADD dogpee.sh /dogpee.sh
+CMD /dogpee.sh
